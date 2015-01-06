@@ -1,24 +1,4 @@
 #!/bin/ash
-echo "Configing Phy Register .................."
-
-wrreg 43c00500 50
-wrreg 43c00508 0400
-wrreg 43c00504 00184800
-wrreg 43c00504 00188800
-rdreg 43c0050c 1
-wrreg 43c00508 f1e7
-wrreg 43c00504 01184800
-wrreg 43c00504 01188800
-rdreg 43c0050c 1
-wrreg 43c00508 f1e7
-wrreg 43c00504 02184800
-wrreg 43c00504 02188800
-rdreg 43c0050c 1
-wrreg 43c00508 f1e7
-wrreg 43c00504 03184800
-wrreg 43c00504 03188800
-rdreg 43c0050c 1
-
 
 echo "Networking Initial, Please wait ..."
 # Due to driver issue, networking interfaces should be set up, then down at first.
