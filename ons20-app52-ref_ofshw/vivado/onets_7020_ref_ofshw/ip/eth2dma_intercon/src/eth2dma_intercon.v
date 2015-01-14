@@ -68,7 +68,7 @@ module eth2dma_intercon
    output reg [1 : 0] m_rxd_axis_tid
    
 );
-   wire m_rxs_axis_tid;
+   wire [1:0] m_rxs_axis_tid;
    wire [31 : 0] m_rxs_axis_tdata_i;
    reg [1:0] m_rxs_axis_tid_r, m_rxs_axis_tid_r_nxt;
    reg m_rxs_axis_tid_fifo_wr;
