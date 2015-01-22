@@ -347,7 +347,7 @@
    /* encode the match address */
    always @(*) begin
       cam_match_encoded_addr = LUT_DEPTH[LUT_DEPTH_BITS-1:0] - 1'b1;
-      for (i = LUT_DEPTH-2; i >= 0; i = i-1) begin
+      for (i = 0; i <= LUT_DEPTH-1; i = i+1) begin
          if (cam_match_unencoded_addr[i]) begin
             cam_match_encoded_addr = i[LUT_DEPTH_BITS-1:0];
          end
